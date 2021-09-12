@@ -13,3 +13,5 @@ sudo tune2fs -O large_dir $DATADISK
 sysctl -w vm.nr_hugepages=1000
 grep -qxF 'vm.nr_hugepages=1000' foo.bar || 'vm.nr_hugepages=1000' echo >> /etc/sysctl.d/local.conf
 cat /proc/meminfo | grep HugePages
+
+apt install -y libtinfo5
